@@ -1,7 +1,7 @@
 pipeline{
     agent any
       parameters{
-         choice(name: "IMAGE_TAG" choices:["v1", "v2", "v3", "latest"], description: "Select images tag")
+         choice(name: "IMAGE_TAG" , choices:["v1", "v2", "v3", "latest"] ,  description: "Select images tag")
          booleanParam(name: "PUSH_TO_HUB", defaultValue: true, description: "check to push image to docker hub") 
       }
     stages{
